@@ -1,4 +1,8 @@
-Rails.application.routes.draw do
+SampleApp::Application.routes.draw do
+ get '/contact', :to => 'pages#contact' 
+ get '/home', :to => 'pages#home' 
+ get '/gallery', :to => 'pages#gallery' 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

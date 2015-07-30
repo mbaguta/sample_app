@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SampleApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title> <%= title %></title>
+  <!-- render  -->
+  <%= render 'layouts/stylesheets' %>
+  <%= render 'layouts/js' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+	<body>
+<div class="container">
+<!--references the header in layouts, simplifying debugging -->
+ <%= render 'layouts/header'%>
 
-</body>
+<section class="round"> 
+
+<%= image_tag placeholder_image(120,90) %>
+
+
+		<%= yield %>
+
+</section>
+
+<%= render 'layouts/footer' %>
+	</body>
+</div> <!--closes container div-->
 </html>
