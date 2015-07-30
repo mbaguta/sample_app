@@ -18,7 +18,7 @@ nav {
 }
 
 nav {
- background-color: grey; 
+ background-color: green; 
  padding: 0 0.7em; 
  white-space: 
  nowrap;
@@ -57,7 +57,7 @@ a.signup_button {
   text-align: left;
    width: 150px; 
    color: #fff;
-    background: grey;
+    background: green;
      font-size: 100%;
       font-weight: bold;
        padding: 20px; 
