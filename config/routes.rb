@@ -1,7 +1,11 @@
 SampleApp::Application.routes.draw do
+  get 'users/new'
+get '/signup', :to => 'users#new'
  get '/contact', :to => 'pages#contact' 
- get '/home', :to => 'pages#home' 
- get '/gallery', :to => 'pages#gallery' 
+  get '/gallery', :to => 'pages#gallery' 
+
+#default page set as the home page, opens at startup of localhost
+ root :to =>'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
