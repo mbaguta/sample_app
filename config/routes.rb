@@ -1,9 +1,5 @@
 SampleApp::Application.routes.draw do
-  get 'users/new'
-get '/signup', :to => 'users#new'
- get '/contact', :to => 'pages#contact' 
-  get '/gallery', :to => 'pages#gallery' 
-
+ 
 #default page set as the home page, opens at startup of localhost
  root :to =>'pages#home'
 
@@ -61,4 +57,5 @@ get '/signup', :to => 'users#new'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match ':controller(/:action(/:id))',:via => [:get,:post]
 end
